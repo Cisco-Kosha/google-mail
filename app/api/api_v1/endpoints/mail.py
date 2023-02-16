@@ -20,7 +20,6 @@ router = APIRouter()
 @router.post("/", response_model=List[Any])
 def send_email(send_email: SendEmail) -> Any:
     credentials = get_credentials()
-    print(credentials.__dict__)
     # credentials = get_credentials()
     # http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', credentials=credentials)

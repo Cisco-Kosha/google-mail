@@ -27,6 +27,7 @@ def get_credentials():
                         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
                         "client_secret": "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", "redirect_uris": ["http://localhost"]}}
     '''
+
     cr = {"installed": {"client_id": settings.CLIENT_ID,
                         "project_id": "kosha-377913", "auth_uri": auth_uri,
          "token_uri": token_uri,
@@ -41,17 +42,16 @@ def get_credentials():
             os.makedirs(credential_dir)
         credential_path = os.path.join(credential_dir, 'file1.json')
         store = oauth2client.file.Storage(credential_path)
-        print(store)
         credentials = store.get()
         if not credentials or credentials.invalid:
             flow = client.flow_from_clientsecrets('credentials.json', SCOPES)
             flow.user_agent = "Kosha"
             flags = oauth2client.tools.argparser.parse_args(args=[])
             credentials = tools.run_flow(flow, store, flags)
-            return credentials
     except Exception as e:
         print(e)
-    return None
+    return credentials
+
 
 
 def CreateMessage(sender, to, subject, msgHtml):
