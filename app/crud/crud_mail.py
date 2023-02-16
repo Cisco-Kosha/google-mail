@@ -16,7 +16,7 @@ from app.core.config import settings, logger
 
 auth_uri = "https://accounts.google.com/o/oauth2/auth"
 token_uri = "https://oauth2.googleapis.com/token"
-SCOPES = 'https://www.googleapis.com/auth/gmail.send'
+SCOPES = 'https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly'
 
 
 def get_credentials():
