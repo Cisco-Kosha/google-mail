@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "fields": [
+    {
+      "field": "ACCESS_TOKEN",
+      "displayName": "OAuth2 Access Token",
+      "type": "String",
+      "minLength": 50,
+      "maxLength": 250,
+      "required": false,
+      "description": "Google OAuth2 access token",
+      "example": "ya29.a0AVvZVsqGLwlQkHPGAAcWySGNXf02fNKmokDLl6fDvaHiI_Om9DDhwqb1P7vt1_PXoe7ZX8iRx0qVXYexCBG3qUD8nexdgDVwhq-tUB2zm6iTCYklwiHNvSYPItvNCrieVgiMtbxGSBSchq2iDPFsIj2nE4MXaCgYKAUkPARASFQGbdwaIcQVAozfRZozDIcnCtQ4dKQ016",
+      "helpSection": "Google OAuth2 access token"
+    },
+    {
+      "field": "REFRESH_TOKEN",
+      "displayName": "OAuth2 refresh token",
+      "type": "String",
+      "minLength": 10,
+      "maxLength": 180,
+      "required": false,
+      "description": "Google OAuth2 refresh token",
+      "example": "1//0gxFitSNCysa0CgY2ARAAGBASNgF-L9IrSh1jDKGSWXHnxKey3esS-69Alrydzz5kXhA0nsXKWRU5XsaL4YAuIpsxAtD48przQg",
+      "helpSection": "Google OAuth2 refresh token"
+    },
+    {
+      "field": "EXPIRES_AT",
+      "displayName": "OAuth2 Expiry Time",
+      "type": "String",
+      "minLength": 5,
+      "maxLength": 20,
+      "required": false,
+      "description": "Google OAuth2 token refresh time",
+      "example": "2022-11-18T15:08:55.642141+05:30",
+      "helpSection": "Google OAuth2 token refresh time"
+    },
+    {
+      "field": "CLIENT_ID",
+      "displayName": "OAuth2 client id",
+      "type": "String",
+      "minLength": 5,
+      "maxLength": 100,
+      "required": false,
+      "description": "Google OAuth2 token refresh time",
+      "example": "1070447801305-e1cn32a6gus7u9dcvutkhhh0frcr4m73.apps.googleusercontent.com",
+      "helpSection": "Google OAuth2 app client id"
+    },
+    {
+      "field": "CLIENT_SECRET",
+      "displayName": "OAuth2 client secret",
+      "type": "String",
+      "minLength": 5,
+      "maxLength": 100,
+      "required": false,
+      "description": "Google OAuth2 token refresh time",
+      "example": "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",
+      "helpSection": "Google OAuth2 app client secret"
+    }
+  ]
+}

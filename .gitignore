@@ -1,0 +1,5 @@
+__pycache__
+.credentials/
+.idea
+.vscode
+credentials.json
