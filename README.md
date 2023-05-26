@@ -1,34 +1,17 @@
-# Kosha Google Mail
+# Kosha Google Mail Connector
 
-Google Mail connector can be used to access Gmail mailboxes and send mail.
+Google Mail (or Gmail) is a web-based email service provided by Google that enables you to integrate email functionality into your applications or use its API to send, receive, and manage emails.
 
-![Gmail](images/gmail.png)
+The Kosha Gmail connector enables you to perform REST API operations from the Gmail API in your Kosha workflow or custom application. Using the Kosha Gmail connector, you can directly access the Google platform to send emails.
 
-This Connector API exposes REST API endpoints to perform any operations on Google Mail service in a simple, quick and intuitive fashion.
+## Authentication
 
-It describes various API operations, related request and response structures, and error codes. 
+Kosha uses OAuth 2.0 to connect to Gmail. If you already have an application registered with Gmail, you can use the following credentials when provisioning the connector:
 
-## Build
+* Google OAuth2 access token
+* Google OAuth2 refresh token
+* Google OAuth2 token refresh time
+* OAuth2 client id
+* OAuth2 client secret
 
-To start the virtualenv of the project, run
-```
-    pipenv shell
-```
-
-To install dependencies, run
-```
-    pipenv install
-```
-
-## Run
-
-To run the project, simply provide env variables to supply your Google Cloud Application Client ID, Client Secret to connect to.
-
-
-```bash
-AWS_SERVER_PUBLIC_KEY=<PUBLIC_KEY> AWS_SERVER_SECRET_KEY=<SECRET_KEY>  uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8002
-```
-
-This will start a worker and expose the API on port `8002` on the host machine 
-
-Swagger docs is available at `https://localhost:8002/docs`
+If you don’t want to use those credentials when provisioning the Gmail connector, Kosha provides bootstrap credentials. After you sign in to your Gmail app, Google gives Kosha an access token and your connector is provisioned. Kosha automatically refreshes your access token before it expires to ensure there’s no disruption in use.
