@@ -4,6 +4,8 @@ Google Mail (or Gmail) is a web-based email service provided by Google that enab
 
 The Kosha Gmail connector enables you to perform REST API operations from the Gmail API in your Kosha workflow or custom application. Using the Kosha Gmail connector, you can directly access the Google platform to send emails.
 
+Refer to the Kosha Gmail connector [API specification](openapi.json) for details.
+
 ## Authentication
 
 Kosha uses OAuth 2.0 to connect to Gmail. If you already have an application registered with Gmail, you can use the following credentials when provisioning the connector:
